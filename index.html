@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="fx"></canvas>
+    <div id="bloom"></div>
+    <div id="cur">✦</div>
+
+    <!-- ═══ PHASE 1: COSMOS ═══ -->
+    <div class="ph on" id="p1">
+      <div class="ct-wrap">
+        <span class="ct-line" id="cl0">Di suatu sudut alam semesta ini...</span>
+        <span class="ct-line" id="cl1"
+          >sebuah bintang istimewa sedang bersinar...</span
+        >
+        <span class="ct-line" id="cl2">tepat hari ini. ✨</span>
+      </div>
+      <div class="tap-hint" id="tapHint">✦ &nbsp; ketuk layar &nbsp; ✦</div>
+    </div>
+
+    <!-- ═══ PHASE 2: IGNITION ═══ -->
+    <div class="ph" id="p2">
+      <p class="p2-title">Nyalakan Harapanmu 🕯️</p>
+      <div class="cake-wrap">
+        <svg id="cakeSvg" width="250" height="215" viewBox="0 0 250 215">
+          <defs>
+            <radialGradient id="gBot" cx="45%" cy="30%">
+              <stop offset="0%" stop-color="#C8783A" />
+              <stop offset="100%" stop-color="#7A380E" />
+            </radialGradient>
+            <radialGradient id="gTop" cx="45%" cy="30%">
+              <stop offset="0%" stop-color="#EE80A2" />
+              <stop offset="100%" stop-color="#A8305E" />
+            </radialGradient>
+            <radialGradient id="gMid" cx="45%" cy="30%">
+              <stop offset="0%" stop-color="#D4A8F0" />
+              <stop offset="100%" stop-color="#8040C0" />
+            </radialGradient>
+            <filter id="fglow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="4" result="b" />
+              <feMerge>
+                <feMergeNode in="b" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- Bottom tier -->
+          <rect
+            x="12"
+            y="135"
+            width="226"
+            height="70"
+            rx="11"
+            fill="url(#gBot)"
+          />
+          <rect
+            x="12"
+            y="133"
+            width="226"
+            height="16"
+            rx="7"
+            fill="#FFBCD0"
+            opacity=".88"
+          />
+          <ellipse
+            cx="38"
+            cy="135"
+            rx="11"
+            ry="7"
+            fill="#FFD8E8"
+            opacity=".75"
+          />
+          <ellipse cx="75" cy="137" rx="9" ry="6" fill="#FFD8E8" opacity=".7" />
+          <ellipse
+            cx="125"
+            cy="135"
+            rx="13"
+            ry="8"
+            fill="#FFD8E8"
+            opacity=".8"
+          />
+          <ellipse
+            cx="175"
+            cy="137"
+            rx="9"
+            ry="6"
+            fill="#FFD8E8"
+            opacity=".7"
+          />
+          <ellipse
+            cx="213"
+            cy="135"
+            rx="11"
+            ry="7"
+            fill="#FFD8E8"
+            opacity=".75"
+          />
+          <text
+            x="50"
+            y="178"
+            font-size="13"
+            text-anchor="middle"
+            fill="rgba(255,255,255,.7)"
+          >
+            ♥
+          </text>
+          <text
+            x="95"
+            y="172"
+            font-size="11"
+            text-anchor="middle"
+            fill="rgba(255,255,255,.6)"
+          >
+            ✦
+          </text>
+          <text
+            x="125"
+            y="178"
+            font-size="15"
+            text-anchor="middle"
+            fill="rgba(255,255,255,.82)"
+          >
+            🎂
+          </text>
+          <text
+            x="155"
+            y="172"
+            font-size="11"
+            text-anchor="middle"
+            fill="rgba(255,255,255,.6)"
+          >
+            ✦
+          </text>
+          <text
+            x="200"
+            y="178"
+            font-size="13"
+            text-anchor="middle"
+            fill="rgba(255,255,255,.7)"
+          >
+            ♥
+          </text>
+
+          <!-- Middle tier -->
+          <rect
+            x="38"
+            y="80"
+            width="174"
+            height="58"
+            rx="9"
+            fill="url(#gMid)"
+          />
+          <rect
+            x="38"
+            y="78"
+            width="174"
+            height="14"
+            rx="6"
+            fill="#EDD8FF"
+            opacity=".88"
+          />
+          <ellipse cx="58" cy="80" rx="8" ry="5" fill="#F5ECFF" opacity=".82" />
+          <ellipse cx="95" cy="82" rx="7" ry="5" fill="#F5ECFF" opacity=".78" />
+          <ellipse
+            cx="125"
+            cy="80"
+            rx="9"
+            ry="6"
+            fill="#F5ECFF"
+            opacity=".85"
+          />
+          <ellipse
+            cx="156"
+            cy="82"
+            rx="7"
+            ry="5"
+            fill="#F5ECFF"
+            opacity=".78"
+          />
+          <ellipse
+            cx="193"
+            cy="80"
+            rx="8"
+            ry="5"
+            fill="#F5ECFF"
+            opacity=".82"
+          />
+          <text
+            x="80"
+            y="114"
+            font-size="11"
+            text-anchor="middle"
+            fill="rgba(255,255,255,.72)"
+          >
+            ★
+          </text>
+          <text
+            x="125"
+            y="118"
+            font-size="13"
+            text-anchor="middle"
+            fill="rgba(255,255,255,.82)"
+          >
+            ✨
+          </text>
+          <text
+            x="170"
+            y="114"
+            font-size="11"
+            text-anchor="middle"
+            fill="rgba(255,255,255,.72)"
+          >
+            ★
+          </text>
+
+          <!-- Top tier -->
+          <rect
+            x="65"
+            y="36"
+            width="120"
+            height="48"
+            rx="8"
+            fill="url(#gTop)"
+          />
+          <rect
+            x="65"
+            y="34"
+            width="120"
+            height="13"
+            rx="5"
+            fill="#FFE8F2"
+            opacity=".88"
+          />
+          <ellipse cx="82" cy="36" rx="7" ry="5" fill="#FFF0F5" opacity=".82" />
+          <ellipse
+            cx="105"
+            cy="38"
+            rx="6"
+            ry="4"
+            fill="#FFF0F5"
+            opacity=".78"
+          />
+          <ellipse
+            cx="125"
+            cy="36"
+            rx="7"
+            ry="5"
+            fill="#FFF0F5"
+            opacity=".85"
+          />
+          <ellipse
+            cx="145"
+            cy="38"
+            rx="6"
+            ry="4"
+            fill="#FFF0F5"
+            opacity=".78"
+          />
+          <ellipse
+            cx="168"
+            cy="36"
+            rx="7"
+            ry="5"
+            fill="#FFF0F5"
+            opacity=".82"
+          />
+          <text
+            x="125"
+            y="68"
+            font-size="13"
+            text-anchor="middle"
+            fill="rgba(255,255,255,.82)"
+          >
+            🎉
+          </text>
+
+          <!-- 5 Candles  cx: 76,97,120,150,173 -->
+          <!-- Candle 0 -->
+          <rect x="72" y="3" width="8" height="34" rx="3" fill="#FF6B9D" />
+          <line
+            x1="76"
+            y1="3"
+            x2="76"
+            y2="-3"
+            stroke="#555"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <g id="fl0" class="fl" filter="url(#fglow)">
+            <ellipse
+              cx="76"
+              cy="-8"
+              rx="5.5"
+              ry="7.5"
+              fill="#FF9F2A"
+              opacity=".88"
+            />
+            <ellipse cx="76" cy="-8" rx="3.2" ry="5.5" fill="#FFE060" />
+            <ellipse cx="76" cy="-6" rx="2" ry="2.5" fill="#FFF" />
+          </g>
+          <g id="sm0" opacity="0" style="transition: opacity 0.4s">
+            <line
+              x1="76"
+              y1="-15"
+              x2="74"
+              y2="-28"
+              stroke="rgba(210,210,210,.55)"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            />
+          </g>
+
+          <!-- Candle 1 -->
+          <rect x="93" y="3" width="8" height="34" rx="3" fill="#FFD700" />
+          <line
+            x1="97"
+            y1="3"
+            x2="97"
+            y2="-3"
+            stroke="#555"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <g id="fl1" class="fl" filter="url(#fglow)">
+            <ellipse
+              cx="97"
+              cy="-8"
+              rx="5.5"
+              ry="7.5"
+              fill="#FF9F2A"
+              opacity=".88"
+            />
+            <ellipse cx="97" cy="-8" rx="3.2" ry="5.5" fill="#FFE060" />
+            <ellipse cx="97" cy="-6" rx="2" ry="2.5" fill="#FFF" />
+          </g>
+          <g id="sm1" opacity="0" style="transition: opacity 0.4s">
+            <line
+              x1="97"
+              y1="-15"
+              x2="95"
+              y2="-28"
+              stroke="rgba(210,210,210,.55)"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            />
+          </g>
+
+          <!-- Candle 2 -->
+          <rect x="116" y="3" width="8" height="34" rx="3" fill="#00CEC9" />
+          <line
+            x1="120"
+            y1="3"
+            x2="120"
+            y2="-3"
+            stroke="#555"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <g id="fl2" class="fl" filter="url(#fglow)">
+            <ellipse
+              cx="120"
+              cy="-8"
+              rx="5.5"
+              ry="7.5"
+              fill="#FF9F2A"
+              opacity=".88"
+            />
+            <ellipse cx="120" cy="-8" rx="3.2" ry="5.5" fill="#FFE060" />
+            <ellipse cx="120" cy="-6" rx="2" ry="2.5" fill="#FFF" />
+          </g>
+          <g id="sm2" opacity="0" style="transition: opacity 0.4s">
+            <line
+              x1="120"
+              y1="-15"
+              x2="118"
+              y2="-28"
+              stroke="rgba(210,210,210,.55)"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            />
+          </g>
+
+          <!-- Candle 3 -->
+          <rect x="146" y="3" width="8" height="34" rx="3" fill="#BF5FFF" />
+          <line
+            x1="150"
+            y1="3"
+            x2="150"
+            y2="-3"
+            stroke="#555"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <g id="fl3" class="fl" filter="url(#fglow)">
+            <ellipse
+              cx="150"
+              cy="-8"
+              rx="5.5"
+              ry="7.5"
+              fill="#FF9F2A"
+              opacity=".88"
+            />
+            <ellipse cx="150" cy="-8" rx="3.2" ry="5.5" fill="#FFE060" />
+            <ellipse cx="150" cy="-6" rx="2" ry="2.5" fill="#FFF" />
+          </g>
+          <g id="sm3" opacity="0" style="transition: opacity 0.4s">
+            <line
+              x1="150"
+              y1="-15"
+              x2="148"
+              y2="-28"
+              stroke="rgba(210,210,210,.55)"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            />
+          </g>
+
+          <!-- Candle 4 -->
+          <rect x="169" y="3" width="8" height="34" rx="3" fill="#FF6348" />
+          <line
+            x1="173"
+            y1="3"
+            x2="173"
+            y2="-3"
+            stroke="#555"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <g id="fl4" class="fl" filter="url(#fglow)">
+            <ellipse
+              cx="173"
+              cy="-8"
+              rx="5.5"
+              ry="7.5"
+              fill="#FF9F2A"
+              opacity=".88"
+            />
+            <ellipse cx="173" cy="-8" rx="3.2" ry="5.5" fill="#FFE060" />
+            <ellipse cx="173" cy="-6" rx="2" ry="2.5" fill="#FFF" />
+          </g>
+          <g id="sm4" opacity="0" style="transition: opacity 0.4s">
+            <line
+              x1="173"
+              y1="-15"
+              x2="171"
+              y2="-28"
+              stroke="rgba(210,210,210,.55)"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            />
+          </g>
+        </svg>
+      </div>
+      <div class="blow-row">
+        <button class="blwBtn" id="blwBtn">💨 &nbsp; Tiup Satu Lilin</button>
+        <span class="cnt-lbl" id="cntLbl">5 lilin tersisa</span>
+      </div>
+    </div>
+
+    <!-- ═══ PHASE 3: BALLOON POP ═══ -->
+    <div class="ph" id="p3">
+      <p class="p3-hdr">🎈 &nbsp; Pop semua balon untuk melihat doanya!</p>
+      <div id="blnField"></div>
+      <p class="p3-ctr" id="p3Ctr">12 balon tersisa</p>
+    </div>
+
+    <!-- ═══ PHASE 4: THE LETTER ═══ -->
+    <div class="ph" id="p4">
+      <div class="env-scene" id="envScene">
+        <div class="env-outer" id="envOuter">
+          <div class="env-3d" id="env3d">
+            <div class="env-body"></div>
+            <div class="env-flap" id="envFlap">
+              <div class="flap-f"></div>
+              <div class="flap-b"></div>
+            </div>
+            <div class="env-l"></div>
+            <div class="env-r"></div>
+            <div class="env-b"></div>
+            <div class="ltr-peek">Spesial Mba lulu Marcomm</div>
+          </div>
+        </div>
+        <p class="env-hint" id="envHint">✦ &nbsp; ketuk amplop &nbsp; ✦</p>
+      </div>
+      <div class="ltr-full" id="ltrFull">
+        <div class="ltr-lines"></div>
+        <div class="ltr-h">A Little Reminder for Mba Lulu</div>
+        <div class="ltr-body" id="ltrBody"><span class="cursor-tw"></span></div>
+        <div class="ltr-sig" id="ltrSig">Keep being you. 🤙🏻</div>
+        <button class="ltr-btn" id="ltrBtn" onclick="goPhase(4)">
+          ✨ &nbsp; Menuju Grand Finale &nbsp; ✨
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══ PHASE 5: GRAND FINALE ═══ -->
+    <div class="ph" id="p5">
+      <p class="fin-sub">✦ &nbsp; selamat ulang tahun &nbsp; ✦</p>
+      <div class="fin-name" id="finName">
+        Special Happy Birthday Portal : Mba Lulu
+      </div>
+      <h1 class="fin-big">Happy<br />Birthday!</h1>
+      <p class="fin-wish">
+        Semoga amal ibadah meningkat serta membawa mimpi yang guedee,<br />dan
+        moga tahun ini penuh dengan hari hari tenang tanpa tumpukan kerjaan
+        xiixixixii.
+      </p>
+      <button class="fin-restart" onclick="location.reload()">
+        ↺ &nbsp; Mulai ulang
+      </button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
