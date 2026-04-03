@@ -768,34 +768,38 @@ function mkFlower(col) {
       ╚══════════════════════════════════════╝ */
 function initP5() {
   document.getElementById("finName").textContent = RECIPIENT;
+
   SFX.fanfare();
-  rain(220);
-  for (let i = 0; i < 14; i++)
+  rain(120);
+
+  for (let i = 0; i < 8; i++) {
     setTimeout(() => {
       burst(
         Math.random() * W,
         Math.random() * H * 0.68,
         FWC[i % FWC.length],
-        85
+        55
       );
       SFX.fw();
-    }, i * 220);
+    }, i * 300);
+  }
 }
 
 /* ╔══════════════════════════════════╗
       ║  C U R S O R  +  T A P  F W     ║
       ╚══════════════════════════════════╝ */
 const cur = document.getElementById("cur");
-document.addEventListener("mousemove", (e) => {
-  cur.style.left = e.clientX + "px";
-  cur.style.top = e.clientY + "px";
-});
+let lastClick = 0;
+
 document.addEventListener("click", (e) => {
-  if (phase === 4)
+  const now = Date.now();
+  if (phase === 4 && now - lastClick > 250) {
+    lastClick = now;
     burst(
       e.clientX,
       e.clientY,
       FWC[Math.floor(Math.random() * FWC.length)],
-      45
+      35
     );
+  }
 });
